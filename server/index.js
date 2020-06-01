@@ -20,11 +20,16 @@ wss.on('connection', function connection(ws) {
     if(game.player1Move && game.player2Move) {
         calculateWinner();
     }
-    ws.send(JSON.stringify(game));
+
+    wss.clients.forEach(sendGame);
   });
 
-  ws.send(JSON.stringify(game));
+  sendGame(ws);
 });
+
+function sendGame(client) {
+  client.send(JSON.stringify(game));
+}
 
 const wins = [
   ['rock', 'scissors'],
