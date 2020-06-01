@@ -1,0 +1,53 @@
+body {
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
+}
+
+#game {
+  font-weight: bold;
+  font-size: 25px;
+  background-color: #eee;
+  margin: 20px;
+  padding: 15px 25px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.players {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.player {
+  background-color: #eee;
+  margin: 20px;
+  padding: 30px 50px;
+  text-align: center;
+  border-radius: 10px;
+
+  h1 {
+      margin: 0 0 20px;
+  }
+
+  select {
+    padding: 9px 25px;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+}
+
+.button {
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: none;
+  padding: 9px 25px;
+  font-size: 0.7em;
+  letter-spacing: 0.7px;
+  background-color: #f58427;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
